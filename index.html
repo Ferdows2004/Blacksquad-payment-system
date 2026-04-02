@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Blacksquad</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="black-box">
+<h2>Blacksquad</h2>
+
+<!-- Logo -->
+<input type="file" id="logoInput" accept="image/*">
+<img id="logoPreview" class="logo">
+
+<br>
+
+<!-- Date -->
+<input type="date" id="date">
+
+<br>
+
+<input type="text" id="name" placeholder="Employee Name">
+<input type="text" id="work" placeholder="Total Work">
+
+<br>
+
+<input type="text" id="salary" placeholder="Salary (500+200*2)">
+<input type="text" id="deduction" placeholder="Deduction (10% বা 100)">
+
+<br>
+
+<button onclick="addEmployee()">Add Employee</button>
+
+</div>
+
+<table id="table">
+<thead>
+<tr>
+<th>Name</th>
+<th>Total Work</th>
+<th>Salary</th>
+<th>Deduction</th>
+<th>Total</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody></tbody>
+</table>
+
+<div class="total-box">
+Grand Total: <span id="grandTotal">0</span>
+</div>
+
+<br>
+<button onclick="downloadPDF()">Download PDF</button>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
